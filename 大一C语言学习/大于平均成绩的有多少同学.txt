@@ -1,0 +1,39 @@
+#include <stdio.h>
+int Fun(int score[], int i);
+
+main()
+{
+	int score[40];
+	int n,i,aver,count,j;
+	count=0;
+	i=0;
+	printf("Input score:");
+	scanf("%d",&score[i]);
+	while(score[i]>0)
+	{
+		i++;
+		printf("Input score:");
+	scanf("%d",&score[i]);
+	
+	}
+	aver=Fun(score,i);
+	for(j=0;j<i;j++)
+	{
+		if(score[j]>aver)
+		count++;
+	}
+	printf("Total students are %d\n",i);
+	printf("Average score is %d\n",aver);
+	printf("Students of above average is %d\n",count);
+	
+ } 
+ int Fun(int score[], int i)
+ {
+ 	int sum=0;
+ 	int j;
+ 	for(j=0;j<i;j++)
+ 	{
+ 		sum+=score[j];
+	 }
+	 return sum/i;
+ }

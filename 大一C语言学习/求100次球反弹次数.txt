@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main()
+{
+    int q;
+    int i;
+    float h = 100,a = 0,sum;
+    printf("input:\n");
+    scanf("%d",&q);
+     
+    for(i=1; i<=q;i++)
+    {       h = h/2.0;      a = a  + 2.0*h; }
+    sum = a + 100 - 2*h;
+    printf("%d times:\n",q);
+    printf("%.3f\n",sum);
+    printf("%.3f\n",h); return 0;}

@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <string.h> 
+void MyStrcat(); 
+main()
+{
+	char s1[30],s2[20];
+	int len1,len2;
+	int i;
+	printf("Input a string:");
+	gets(s1);
+	printf("Input another string:");
+	gets(s2);
+	len1=strlen(s1);
+	len2=strlen(s2);
+	
+	for(i=0;i<=len2;i++)
+	s1[len1+i]=s2[i];
+	printf("Concatenate results:%s\n",s1);
+}
+
+Ö¸Õë·½·¨
+
+#include <stdio.h>
+void  MyStrcat(char *dstStr, char *srcStr);
+main()
+{
+	char *dstStr,*srcStr;
+	int l;
+	char a[100],b[100];
+	printf("Input a string:");
+	gets(a);
+	printf("Input another string:");
+	gets(b);
+	l=strlen(a);
+	dstStr=&a[l];
+	srcStr=&b[0];
+	 MyStrcat(dstStr, srcStr);
+	 printf("Concatenate results:%s\n",a);
+	 
+}
+void  MyStrcat(char *dstStr, char *srcStr)
+{
+	int i;
+	for(i=0;*srcStr!='\0';i++)
+	{
+		*dstStr=*srcStr;
+		dstStr++;
+		srcStr++;
+	}
+	*dstStr='\0';
+}

@@ -1,0 +1,10 @@
+#include "stdio.h"
+ 
+int main()
+{
+    int m;
+    char *months[]={"January","February","March","April","May","June","July","August","September","October","November","December"};
+    printf("Input Month:");
+    scanf("%d",&m);
+    printf("The month is:%s",*(months+m-1));
+}

@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h>
+
+void reverstr(char *src)
+{
+    int len = strlen(src);
+    char* start = src;
+    char* end = src + len - 1;
+    int i;
+    char ch;
+    
+    for(i = 0; i < len / 2; i++)
+    {
+        ch = *start;
+        *start = *end;
+        *end = ch;
+        start++;
+        end--;
+    }
+}
+
+int main(int argc, char* argv[])
+{
+    char p[100] ;
+    gets(p);
+    printf("the original string is :%s\n", p);
+    reverstr(p);
+   puts(p);
+
+    return 0;
+}

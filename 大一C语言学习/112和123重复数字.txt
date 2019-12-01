@@ -1,0 +1,48 @@
+#include <stdio.h>
+int count[30]={0};
+int CountRepeatNum(int count[], long n);
+int main(int argc, const char * argv[])
+{
+    long n;
+    printf("Enter a number :");
+    scanf("%ld",&n);
+    int w;
+    w = CountRepeatNum(count, n);
+    if(w==-1)
+        printf("Repeated digit!\n");
+
+    else
+        printf("No Repeated digit!\n");
+    
+    
+    
+    
+}
+int CountRepeatNum(int count[], long n)
+{
+    int m,i,j,k;
+    i = j =0;
+    do
+    {
+        m = n%10;
+        count[i] = m;
+        n = n/10;
+        i++;
+    }while(n != 0);
+    
+    for(j=0;j<i;j++)
+    {
+        for(k=1+j;k<i;k++)
+        {
+            if(count[j]==count[k])
+            {
+                return -1;
+                break;
+            }
+        else
+            continue;
+        }
+    }
+    
+    return 0;
+}

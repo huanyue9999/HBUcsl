@@ -1,0 +1,39 @@
+
+#include <stdio.h>
+struct complx
+{
+	int a;
+	
+	int b;
+	
+}	;
+main()
+{
+	static struct complx za={3,4};
+	static struct complx zb={5,6};
+	
+	struct complx x,y,z;
+	struct complx cmult();
+	void cpr();
+	z=cmult(za,zb);
+	cpr(za,zb,z);
+	x.a=10;x.b=20;
+	x.a=30;x.b=40;
+	z=cmult(x,y);
+	cpr(x,y,z);
+}
+struct complx cmult (za,zb)
+struct complx za,zb;
+{
+	struct complx w;
+	w.a=za.a*zb.a-za.b*zb.b;
+	w.b=za.a*zb.b+za.b*zb.a;
+	return (w);
+	
+}
+void cpr(za,zb,z)
+	struct complx za,zb,z;
+ {
+ 	printf("(%d+%di)*(%d+%di)=",za.a,za.b,zb.a,zb.a);
+ 	printf("(%d+%di)\n",z.a,z.b);
+ }

@@ -1,0 +1,24 @@
+#include <stdio.h>
+#define  M 100
+int main() 
+{   
+    int a[M][M],i,j,msum = 0,ssum = 0;  
+    int N;  
+    printf("input N:"); 
+    scanf("%d",&N); 
+    printf("请输入%d*%d的矩阵:\n",N,N);   
+    for(i = 0; i < N; ++i) 
+    {       
+        for(j = 0; j < N; ++j)      
+        {               
+            scanf("%d",&a[i][j]);   
+    }   
+}
+    for(i = 0; i < N; ++i) 
+    {       
+        msum += a[i][i];        
+        ssum += a[i][N-1- i];   
+}   
+    printf("主对角线的和是:%d\n斜对角线的和是:%d\n\n",msum,ssum); 
+    return 0;
+}

@@ -1,0 +1,50 @@
+#include <stdio.h>
+int IsPrime(int x);
+int Sum();
+main()
+{
+	int n,q,sum,m;
+	printf("Input n:");
+	scanf("%d",&n);
+
+
+	if(n<=1)
+	sum=0;
+	else if(n==2)
+	sum=2;
+	else if(n>2)
+	{
+		sum=2;
+		for(q=3;q<=n;q++)
+		{
+			m=IsPrime(q);
+			if(m==1)
+			{
+			sum+=q;
+			
+			}
+			else if(m==0)
+			sum+=0;
+		}
+	
+
+	}
+		printf("%d\n",sum);
+	
+	
+ } 
+ int IsPrime(int x)
+ {
+ 	int i,j,z;
+ 	for(j=2;j<x;j++)
+ 	{
+ 		z=1;
+ 		if(x%j==0)
+ 		{
+ 			z=0;
+ 			break;
+		 }
+	 }
+	 return z;
+	 
+ }

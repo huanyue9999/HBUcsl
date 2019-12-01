@@ -1,0 +1,70 @@
+#include <stdio.h>
+int  Max();
+int Min();
+float Aver();
+
+main()
+{
+	int a[10];
+	int max,min,i;
+	float aver;
+	printf("请输入10个学生的C成绩：\n");
+	for(i=0;i<10;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	max=Max(a);
+	min=Min(a);
+	aver=Aver(a);
+	printf("10个学生的C成绩分别为：\n");
+	for(i=0;i<10;i++)
+	{
+		printf("%d ",a[i]);
+	}
+	printf("\n");
+	printf("最高成绩是%d,是第%d个学生\n",a[max],max+1);
+	printf("最低成绩是%d,是第%d个学生\n",a[min],min+1);
+	printf("10名学生的C成绩的平均分为:%.2f\n",aver);
+}
+
+int Max(int a[])
+{
+	int i,j,max;
+	max=a[0];
+	for(i=1;i<10;i++)
+	{
+		if(max<a[i])
+		{
+			max=a[i];
+			j=i;
+		}
+	}
+	return j;
+}
+
+int Min(int a[])
+{
+	int i,j,min;
+	min=a[0];
+	for(i=1;i<10;i++)
+	{
+		if(min>a[i])
+		{
+			
+			j=i;
+		}
+	}
+	return j;
+}
+
+float Aver(int a[])
+{
+	int sum=0,i,j;
+	float aver;
+	for(i=0;i<10;i++)
+	{
+		sum+=a[i];
+	}
+	aver=sum*1.0/10;
+	return aver;
+}

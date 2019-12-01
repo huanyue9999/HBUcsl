@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <math.h>
+ 
+#define EPS 1e-6
+main()
+{
+    float derta,a,b,c,m,n,x1,x2;
+    printf("Please enter the coefficients a,b,c:");
+    scanf("%f,%f,%f",&a,&b,&c);
+    if(a!=0)
+    {
+        derta=b*b-4*a*c;
+        if(derta>EPS)
+        {
+            x1=(-b+(sqrt)(derta))/2.0*a;
+            x2=(-b-(sqrt)(derta))/2.0*a;
+            printf("x1 = %.2f, x2 = %.2f\n",x1,x2);
+        }
+        else if(derta==0)
+        {
+            x1=(-b+(sqrt)(derta))/2.0*a;
+            printf("x1 = x2 = %.2f\n",x1);
+        }
+        else if(derta<0)
+        {
+            m=(sqrt(-derta))/(2*a);
+ 
+printf("x1 = %.2f+%.2fi," ,-b/(2.0*a),m);
+printf(" x2 = %.2f-%.2fi\n",-b/(2.0*a),m);
+             
+        }
+        
+         
+    }
+     else if(a==0)
+        printf("It is not a quadratic equation!");
+ 
+     
+}

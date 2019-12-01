@@ -1,0 +1,22 @@
+#include <stdio.h>
+main()
+{
+    int i,sum,len;
+    char s[10];
+    printf("Enter a string: ");
+    gets(s);
+    sum=0;
+    len=strlen(s);
+    
+    for(i=0;i<len;i++)
+{
+if(s[i]<='9'&&s[i]>='0')
+{
+sum*=10;
+sum+=s[i]-'0';
+}
+else break;
+}
+printf("digit = %d\n",sum);
+
+}

@@ -1,0 +1,18 @@
+#include <stdio.h>
+main()
+{
+	char a[7]={"secret"};
+	char s[15];
+	int i,j;
+	printf("Input Password:");
+	scanf("%s",s);
+	
+	i=strcmp(s,a);
+	if(i>0)
+	printf("Invalid password!user input>password\n");
+	else if(i<0)
+	printf("Invalid password!user input<password\n");
+	else if(i==0)
+	printf("Correct password! Welcome to the system...\n");
+	
+ } 

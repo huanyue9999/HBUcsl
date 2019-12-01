@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+main()
+{
+	char a[100],b[100];
+	printf("input a string:\n");
+	gets(a);
+	int q,i,j=0;
+	printf("input start point:\n");
+	scanf("%d",&i);
+	for(q=i-1;b[j]!='\0';q++)
+	{
+		b[j]=a[q];
+		j++;
+	}
+	puts(b);
+}

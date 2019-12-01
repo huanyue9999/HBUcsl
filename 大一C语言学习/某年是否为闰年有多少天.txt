@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+int main() {
+    int year, month, ex;
+    printf("Input year,month:");
+    scanf("%d,%d", &year, &month);
+    if(month < 1 || month > 12) {
+        printf("Input error!\n");
+    } else {
+        if((year%4 == 0 && year%100 != 0) || year%400 == 0) {
+            ex = 1;
+        //    printf("%d年为闰年。\n", year);
+
+        } else {
+            ex = 0;
+          //  printf("%d年不为闰年。\n", year);
+        }
+
+        switch(month) {
+            case 4: case 6: case 9: case 11: printf("%d days\n", 30); break;
+            case 2: printf("%d days\n",  28+ex); break;
+            default: printf("%d days\n", 31);
+        }
+    }
+}

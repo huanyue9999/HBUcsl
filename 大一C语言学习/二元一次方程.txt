@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+main()
+{
+  float a,b,c,derta,kaif,x1,x2;
+  printf("一元二次方程系数分别为：\n");
+  scanf("%f %f %f",&a,&b,&c);
+  derta=1.0*b*b-4.0*a*c;
+  if(derta>0)
+  {
+  kaif=sqrt(derta);
+  x1=(-b+kaif)/2.0*a;
+  x2=(-b-kaif)/2.0*a;
+  printf("一元二次方程的解为：x1=%7.2f,x2=%7.2f",x1,x2);
+  }
+  else if(derta<0)
+  {
+  printf("该方程无实根！");
+  }
+  else if(derta=0)
+  {
+  kaif=sqrt(derta);
+  x1=(-b+kaif)/2.0*a;
+  printf("一元二次方程的解为：x1=x2=%7.2f",x1);
+  }
+}

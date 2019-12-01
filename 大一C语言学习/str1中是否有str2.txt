@@ -1,0 +1,31 @@
+#include <stdio.h>
+main()
+{
+	char str1[30];
+	char str2[30];
+	char str[30];
+	int i,j,flag=0,l1,l2;
+	printf("Please input the first str:");
+	gets(str1);
+	printf("Please input the second str:");
+	gets(str2);
+	l1=strlen(str1);
+	l2=strlen(str2);
+	
+	
+	for(i=0;i<=l1-l2;i++)
+	{
+		for(j=0;j<l2;j++)
+		{
+			str[j]=str1[i+j];
+		}
+		str[l2]='\0';
+		if(strcmp(str,str2)==0)
+		flag=1;
+		
+	}
+	if(flag==1)
+	printf("YES");
+	else
+	printf("NO");
+}

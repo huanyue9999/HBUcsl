@@ -1,0 +1,15 @@
+#include <stdio.h>
+main()
+{
+    int n,h,l,sum;
+    printf("Input n:\n");
+    scanf("%d",&n);
+    for(h=1;h<=n;h++)
+    {
+        for(l=1;l<=h;l++)
+        {
+            printf("%4d",h*l);
+        }
+        printf("\n");
+    }
+}

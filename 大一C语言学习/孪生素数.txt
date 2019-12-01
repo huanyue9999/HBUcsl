@@ -1,0 +1,29 @@
+#include <stdio.h>
+int fun();
+main()
+{
+	int i,j;
+    long int c,d;
+    printf("Please input c and d(c>2):");
+    scanf("%ld,%ld",&c,&d);
+    for(i=c;i<d-2;i++)
+    {
+    	if(fun(i)==1&&fun(i+2)==1)
+    	printf("(%ld,%ld)",i,i+2);
+	}
+}
+int fun(int i)
+{
+    int q,z;
+    q=1;
+    for(z=2;z<i;z++)
+    {
+        if(i%z==0)
+        {
+            q=0;
+			break;
+			 
+        }
+	}
+	return q;
+} 

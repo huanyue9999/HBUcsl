@@ -1,0 +1,57 @@
+#include <stdio.h>
+#define N 80
+void MyStrcpy();
+
+main()
+{
+	char a[N],b[N];
+	printf("Input a string:");
+	gets(a);
+	MyStrcpy(b,a);
+	printf("The copy is:");
+	puts(b);
+	return 0;
+	
+}
+void MyStrcpy(char b[],char a[])
+{
+	int i=0;
+	while (a[i]!='\0')
+	{
+		b[i]=a[i];
+		i++;
+	}
+	b[i]='1\0';
+}
+
+
+÷∏’Î
+
+#include <stdio.h>
+void  MyStrcpy( char *dstStr, char *srcStr );
+
+main()
+{
+	char *dstStr;
+	 char *srcStr; 
+	char a[100];
+	char b[100];
+	printf("Please enter a string:\n");
+	gets(a);
+	dstStr=&a[0];
+	srcStr=&b[0];
+	MyStrcpy(dstStr,srcStr);
+	printf("The copy is:%s",b);
+	
+}
+void  MyStrcpy( char *dstStr, char *srcStr )
+{
+	int i,j;
+	for(i=0;*dstStr!='\0';i++)
+	{
+		*srcStr=*dstStr;
+		dstStr++;
+		srcStr++;
+	}
+	*srcStr='\0';
+}

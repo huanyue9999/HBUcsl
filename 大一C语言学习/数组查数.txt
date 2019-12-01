@@ -1,0 +1,41 @@
+#include <stdio.h>
+int Search();
+
+main()  //数组输入十个数后 再输入一个数x，查找其在数组中的位置 
+{
+	int a[10],n,i,x;
+	printf("Input 10 numbers:\n");
+	for(i=0;i<10;i++)
+	{
+		scanf("%d",&a[i]);   //数组输入10个数 
+	}
+	
+	printf("Input x:\n");
+	scanf("%d",&x);           //输入需要查找的数 	 
+	
+	n=Search(a[10],x);      //传递函数 
+	
+	if(n==-1)
+	{
+		printf("Not found!\n");  //返回若为-1 ，则不存在该数 
+	}
+	else 
+	{
+		printf("Subscript of x is %d\n",n);   //否则输出其数组下标 
+	}
+}
+
+int Search(int a[],int x)
+{
+	int z,q;  
+	z=-1;            //开始假设没有找到 
+	for(q=0;q<10;q++)
+	{
+		if(a[q]==x)
+		{
+			z=q;   //若找到该数则结束循环，并赋值数组下标 ，若没有找到则z=-1 
+			break;
+		}
+	}
+	return z;    //返回z 
+}

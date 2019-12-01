@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+void transpose();
+int main()
+{
+	int a[10][10],b[10][10],i,n,j;
+		scanf("%d",&n);
+	
+	printf("Input %d*%d matrix:\n",n,n);
+	for(i=0;i<n;i++)
+		for(j=0;j<n;j++)
+			scanf("%d",&a[i][j]);
+	printf("The transposed matrix is:\n");
+	transpose(a,b,n);
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<n;j++)
+			printf("%d\t",b[i][j]);
+		putchar(10);
+	}
+	return 0;
+}
+
+void transpose(int a[][10],int b[][10],int n)
+{
+	int i,j;
+	for(i=0;i<n;i++)
+		for(j=0;j<n;j++)
+			b[i][j]=a[j][i];
+}

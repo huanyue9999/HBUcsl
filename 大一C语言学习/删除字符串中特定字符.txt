@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+#define N 100
+
+
+ void Deal(char a[],char b[],char ch)
+ {
+ 	int i,j=0;
+ 	for(i=0;i<N;i++)
+ 	{
+ 		if(a[i]!=ch)
+ 		{
+ 			b[j]=a[i];
+ 			j++;
+		 }
+	 }
+ }
+main()
+{
+	char a[N],ch,b[N];
+	printf("Input a string:\n");
+	gets(a);
+	
+	printf("Input a character:\n");
+	ch = getchar();
+	Deal(a,b,ch);
+	printf("Results:%s\n",b);
+	
+	
+ } 

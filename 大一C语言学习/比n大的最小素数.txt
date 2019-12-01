@@ -1,0 +1,35 @@
+#include <stdio.h>
+int IsPrime(int x);
+main()
+{
+	int i,x,n;
+	printf("Please input n:");
+	scanf("%d",&n);
+	for(i=n+1;;i++)
+	{
+		if(IsPrime(i)==1)
+		{
+			break;
+		}
+	}
+	printf("%d\n",i);
+}
+int IsPrime(int i)
+{
+	int k,q,m;
+	if(i==2)
+	return 1;
+	else 
+	{
+		for(k=2;k<i;k++)
+		{
+			q=1;
+			if(i%k==0)
+			{
+				q=0;
+				break;
+			}
+		 } 
+		 return q;
+	}
+}

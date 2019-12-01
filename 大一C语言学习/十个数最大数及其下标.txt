@@ -1,0 +1,33 @@
+#include <stdio.h>
+main()
+{
+    int a[10];
+    int i,j,max,min,pos1,pos2;
+    for(i=0;i<10;i++)
+    {
+        scanf("%d",&a[i]);
+        
+    }
+    max=a[0];
+    for(j=1;j<i;j++)
+    {
+        if(max<a[j])
+        {
+            max=a[j];
+            pos1=j;
+            
+        }
+    }
+    min=a[0]; 
+    for(j=1;j<i;j++)
+    {
+        if(min>a[j])
+        {
+            min=a[j];
+            pos2=j;
+            
+        }
+    }
+    printf("max=%d, pos=%d\n",max,pos1);
+    printf("min=%d, pos=%d\n",min,pos2);
+} 

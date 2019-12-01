@@ -1,0 +1,46 @@
+#include <stdio.h>
+void InputMatrix();
+int AddDiagonal();
+#define N 100
+main()
+{
+	int a[N][N];
+	int n,sum,i,j;
+	printf("Input n:"); 
+	scanf("%d",&n);
+	InputMatrix(a, n);
+	sum=  AddDiagonal(a,n);
+	printf("sum = %d\n",sum);
+}
+void InputMatrix(int a[N][N],int n)
+{
+	int i,j;
+		for(i=0;i<n;i++)
+	{
+		for(j=0;j<n;j++)
+		{
+			scanf("%d",&a[i][j]);
+			
+		}
+	}
+	
+}
+int AddDiagonal(int a[N][N],int n)
+{
+	int i,j;
+	int sum=0;
+	for(i=0;i<n;i++)
+	{
+		sum+=a[i][i];
+	}
+	for(j=n-1;j>=0;j--)
+	{
+		sum+=a[j][n-1-j];
+	}
+	if(n%2==0)
+	{
+		return sum;
+	 } 
+	 else 
+	return sum-a[(n-1)/2][(n-1)/2]; 
+}

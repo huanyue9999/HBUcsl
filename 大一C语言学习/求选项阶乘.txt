@@ -1,0 +1,31 @@
+#include <stdio.h>
+ unsigned long Fact();
+
+main()
+{
+	int m,k;
+	unsigned long  end,i,j,q;
+	printf("Input m,k (m>=k>0):");
+	scanf("%d,%d",&m,&k);
+	
+	while(k<0||m<k)
+	{
+			printf("Input m,k (m>=k>0):");
+		scanf("%d,%d",&m,&k);
+	}
+	i =Fact(m);
+	j = Fact(k);
+	q = Fact(m-k);
+	end =i/(j*q);
+	printf("The combination is %ld\n",end);
+}
+
+unsigned long Fact(unsigned long r)
+{
+	int i,j,mul=1;
+	for(i=1;i<=r;i++)
+	{
+		mul*=i;
+	}
+	return mul;
+}

@@ -1,0 +1,16 @@
+
+
+#include  <stdio.h>
+main()
+{
+    double term, result;  
+    int n;
+ result=1.0;
+    for (n=2;n<=100; n=n+2)
+    {
+        term = 1.0*(n * n) / (( n - 1) * ( n + 1));   
+        result = result * term;
+    }
+    result = 2.0*result;
+    printf("result=%f\n", result);
+}

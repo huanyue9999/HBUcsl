@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include <math.h>
+main()
+{
+	float a,b,c,q,p;
+	printf("Please enter the coefficients a,b,c:");
+	scanf("%f,%f,%f",&a,&b,&c);
+	p=-b/(2*a);
+
+	float x1,x2,derta;
+	derta=sqrt(b*b-4*a*c);
+	x1=(-b-derta)/(2*a);
+	x2=(-b+derta)/(2*a);
+	printf("x1=%7.4f, x2=%7.4f\n",x1,x2);
+ }

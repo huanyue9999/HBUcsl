@@ -1,0 +1,31 @@
+
+#include <stdio.h>
+int fun();
+main()
+{
+	int a[8];
+	int i,j;
+	for(i=0;i<8;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	j=fun(a);
+	if(j==1)
+	printf("yes,it is\n");
+	else
+	printf("no,it is not\n");
+}
+int fun(int a[])
+{
+	int i=0,j=7,k=1;
+	do{
+		if(a[j]!=a[i])
+		{
+			k=0;break;
+		 } 
+		j--;
+		i++;
+		
+	}while(i<j);
+	return k;
+}

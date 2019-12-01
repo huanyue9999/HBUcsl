@@ -1,0 +1,59 @@
+#include <stdio.h>
+int Readscore();
+int  Aver();
+#define N 40
+int Aboscore();
+
+main()
+{
+    int n,m,above;
+    int score[N];
+    int  aver;
+    n=Readscore(score);
+    printf("Total students are %d\n",n);
+    aver=Aver(score,n);
+    printf("Average score is %d\n",aver);
+    above=Aboscore(score,aver,n);
+    printf("Students of above average is %d\n",above);
+    
+}
+
+int Readscore(int score[])
+{
+	int i=-1;
+	
+	do{
+		i++;
+		printf("Input:");
+		scanf("%d",&score[i]);
+	}while(score[i]>0);
+	return i;
+ } 
+
+int  Aver(int score[],int n)
+{
+	int z,sum;
+	sum=0;
+	 
+	for(z=0;z<n;z++)
+	{
+		sum+=score[z];
+	 } 
+	if(n>0)
+	return sum/n;
+	else 
+	return -1;
+}
+
+int Aboscore(int score[],int aver,int n)
+{
+	int x,count=0;
+	for(x=0;x<n;x++)
+	{
+		if(score[x]>aver)
+		count++;
+		
+	}
+	return count;
+}
+

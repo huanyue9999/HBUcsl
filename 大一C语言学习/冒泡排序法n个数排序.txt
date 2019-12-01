@@ -1,0 +1,24 @@
+#include "stdio.h"
+int main()
+{
+   int a[110],n,i,j;
+   int temp;
+   printf("Input n:");
+   scanf("%d",&n);
+   printf("Input %d numbers:",n);
+   for (i=1;i<=n;i++)
+       scanf("%d",&a[i]);
+   for (i=1;i<=n-1;i++)
+       for (j=1;j<=n-1;j++)
+           if(a[j]>a[j+1])
+           {
+               temp=a[j];
+               a[j]=a[j+1];
+               a[j+1]=a[j];
+           }
+   printf("Sorting results:");
+   for (i=1;i<=n;i++)
+       printf("% 4d",a[i]);
+
+   return 0;
+}

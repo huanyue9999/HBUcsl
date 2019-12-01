@@ -1,0 +1,31 @@
+#include<stdio.h>
+
+main()
+
+{
+
+	char s[][9] = { "January","February","March","April","May","June","July","August","September","October","November","December"};
+
+	int n;
+
+	printf("Input month number:\n");
+
+	scanf("%d",&n);
+
+	if (n < 1 || n>12)
+
+	{
+
+		printf("%s\n","Illegal month");
+
+	}
+
+	else
+
+	{
+
+        printf("month %d is %s\n", n, s[n - 1]);
+
+	}
+
+}

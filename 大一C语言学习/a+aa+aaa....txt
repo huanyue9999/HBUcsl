@@ -1,0 +1,18 @@
+#include <stdio.h>
+main()
+{
+	int a,n,i,j,k,q,sum;
+	
+	printf("please input a and n\n");
+	scanf("%d,%d",&a,&n);
+	q=a;
+	sum=a;
+	for(i=1;i<n;i++)
+	{
+		
+		a=q+a*10;
+		sum+=a;
+	}
+	printf("a=%d,n=%d\n",q,n);
+	printf("a+aa+...=%ld\n",sum);
+ } 

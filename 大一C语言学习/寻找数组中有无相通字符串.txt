@@ -1,0 +1,30 @@
+#include <stdio.h>
+main()
+{
+	char *s[]={"abc", "bbc", "ccc", "Hello", "John", "Tome"};
+	char a[10];
+	int i,j;
+	printf("请输入一行字符：");
+	gets(a) ;
+
+	for(i=0;i<6;i++)
+	{
+		j=1;
+		if(strcmp(a,s[i])==0)
+		{
+			j=0;
+			break;
+		}
+	
+	}
+		if(j==0)
+		{
+			printf("欢迎你，%s！",a);
+	
+		}
+		else
+		{
+			printf("名字没有找到！");
+		
+		}
+ } 

@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <string.h>
+void fun(char x[],int n,int *t)
+{
+	int i,j,q=0;
+
+	for(i=j=0;x[i]!='\0';i++){
+
+		if(x[i]!='a'||q==1){
+
+			x[j++]=x[i];
+			
+
+		}
+		else
+		q++;
+
+	}
+
+	x[j]='\0';
+}
+     
+main()
+{
+    char x[20];
+    int len;
+    int *t;
+    gets(x);
+    puts(x);
+    len=strlen(x);
+    fun(x,len,t);
+   puts(x);
+}

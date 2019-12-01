@@ -1,0 +1,62 @@
+ 
+#include <stdio.h>
+  
+struct Person             //声明结构体
+  
+{
+  
+    char name[20];
+  
+    int count;
+  
+}leader[3]={"li",0,"zhang",0,"wang",0};   //定义结构体数组并初值化
+  
+int main()
+  
+{
+  
+    int i,j,z=0;
+    int q=0;
+  
+    char leader_name[20];     //定义字符数组
+  
+    for(i=0;i<10;i++)
+  
+    {q=0;
+        printf("Input vote %d:",i+1);
+  
+        scanf("%s",leader_name);   //选民输入候选人名字
+          
+           
+          strlwr(leader_name); //把所有字母变成小写 
+         
+         
+        for(j=0;j<3;j++)
+  
+        {
+  
+            if(strcmp(leader_name,leader[j].name)==0)
+                {
+                    q=1;leader[j].count++;
+                }
+            
+  
+        }
+     if(q==0)
+     z++;
+    }
+  
+    printf("Election results:\n");
+  
+    for(i=0;i<3;i++)
+  
+    {
+  
+        printf("%8s:%d\n",leader[i].name,leader[i].count);
+  
+    }
+    printf("Wrong election:%d\n",z);
+  
+    return 0;
+  
+}
